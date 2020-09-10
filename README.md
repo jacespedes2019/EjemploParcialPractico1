@@ -49,13 +49,13 @@ En la clase _MedicoResource_ usted debe:
 
 ```
 Method: POST
-URL: http://localhost:8080/s3_pokemon-api/api/pokemons
+URL: http://localhost:8080/s2_parcial1-api/api/medicos
 Body:
 {
-	"firstName": "Juan Jose",
-	"lastName": "Rodríguez Ortiz"
-	"registrer": "FC3578K",
-	"specialty": "Anesthesiology"
+	"nombre": "Juan Jose",
+	"apellido": "Rodríguez Ortiz"
+	"registroMedico": "FC3578K",
+	"especialidad": "Anestesiología"
 }
 Response: 200
 ```
@@ -64,13 +64,13 @@ Response: 200
 
 ```
 Method: POST
-URL: http://localhost:8080/s3_pokemon-api/api/pokemons
+URL: http://localhost:8080/s2_parcial1-api/api/medicos
 Body:
 {
-	"firstName": "Juan Jose",
-	"lastName": "",
-	"registrer": "FC3578K",
-	"specialty": "Anesthesiology"
+	"nombre": "Juan Jose",
+	"apellido": "",
+	"registroMedico": "FC3578K",
+	"especialidad": "Anestesiología"
 }
 Response: 412
 "El médico tiene el apellido vacío o nulo"
