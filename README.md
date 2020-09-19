@@ -6,6 +6,7 @@
 2. Clone el repositorio bifurcado en su máquina virtual
 3. Abra los proyectos en Netbeans
 4. En Netbeans vaya a _Services > Databases > JavaDB_ y cree una base de datos que se llame _parcial1_ (los demás campos déjelos en blanco)
+5. Lea el enunciado completamente antes de iniciar
 
 ## Punto 1 (30%). Persistencia
 
@@ -64,7 +65,7 @@ Body:
 Response: 200
 ```
 
-### Creación incorrect: apellido vacío
+### Creación incorrecta: apellido vacío o nulo
 
 ```
 Method: POST
@@ -90,4 +91,4 @@ Response: 412
 
 4. Cree un _release_ de su código con el nombre "Parcial1_2603".
 
-5. Suba el archivo zip del release como respuesta a la evaluación en SICUA
+5. Suba el archivo zip del release como respuesta a la actividad en SICUA
