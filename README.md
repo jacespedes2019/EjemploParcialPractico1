@@ -15,23 +15,23 @@ Esta aplicación tiene el propósito de crear un sistema de información para un
 
 (10%) Realice la implementación de la persistencia del Medico. La clase de persistencia debe tener por lo menos el método para crear un nuevo Medico.
 
-(10%) Cree la prueba unitaria en la clase correspondiente, para el método **crear** un Medico, los cuáles validan si está correcta la implementación de la persistencia de la entidad.
+(10%) Cree la prueba unitaria en la clase correspondiente, para el método **crear** un Medico, el cual valida si está correcta la implementación de la persistencia de la entidad.
 
 Ejecute la prueba y valide que pasa correctamente.
 
-## Punto 2 (50%). Lógica
+## Punto 2 (40%). Lógica
 
 Usted debe crear la lógica de la aplicación que cubra las reglas de negocio para la entidad _MedicoEntity_. Las reglas de negocio para **crear** un Medico son:
 
 - No puede haber dos médicos con el mismo número de registro
 - Los nombres y apellidos no pueden ser nulos o vacíos
-- La especialidad debe tener más de 10 caracteres
+- La especialidad debe tener más de 4 caracteres
 
-(30%) Crear el método en la capa de lógica que valide las reglas de negocio y solicita persistir en caso que todas pasen (sólo para método crear).
+(20%) Crear el método en la capa de lógica que valide las reglas de negocio y solicita persistir en caso que todas pasen (sólo para el método crear).
 
 (20%) Crear al menos dos pruebas unitarias: una que valida el escenario ideal en el que todas las reglas de negocio se aprueban, y otra en la que valide cuando una regla de negocio falla. Si las reglas de negocio se cumplen, se debe llamar la persistencia para que el objeto sea persistido, de lo contrario debe lanzar una excepción _BusinessLogicException_ con un mensaje donde se especifique el problema.
 
-## Punto 3 (20%). Pruebas de integración
+## Punto 3 (20%). API
 
 En la aplicación le hemos brindado parte de la capa REST API para probar. Para esto, en la clase _MedicoDTO_ usted debe:
 
@@ -43,9 +43,13 @@ En la aplicación le hemos brindado parte de la capa REST API para probar. Para 
 
 En la clase _MedicoResource_ usted debe:
 
-(5%) Modificar el método _createPokemon_ para que llame al método de la lógica que crea el pokemón, y retorne al usuario el nuevo pokemón creado.
+(5%) Modificar el método _createMedico_ para que llame al método de la lógica que crea el médico, y retorne al usuario el nuevo médico creado.
 
-### Prueba 1. Creación correcta Pokemon:
+## Punto 4 (10%). Pruebas de interación en Postman
+
+Cree las siguientes pruebas de integración en una colección
+
+### Creación correcta
 
 ```
 Method: POST
@@ -60,7 +64,7 @@ Body:
 Response: 200
 ```
 
-### Prueba 2. Creación incorrecta Pokemon (Pokemon repetido):
+### Creación incorrect: apellido vacío
 
 ```
 Method: POST
@@ -78,10 +82,12 @@ Response: 412
 
 ## Entrega
 
-1. Agregue los pantallazos de las pruebas de Postman a la carpeta images de su repositorio
+1. Agregue los pantallazos de las pruebas de Postman a la carpeta _images_ de su repositorio
 
-2. Haga commit y push a la rama master
+2. Exporte la coleccioń en la carpeta `s2_parcial1-api/collections`
 
-3. Cree un _release_ de su código con el nombre "Parcial1_2603".
+3. Haga commit y push a la rama master
 
-4. Suba el archivo zip del release como respuesta a la evaluación en SICUA
+4. Cree un _release_ de su código con el nombre "Parcial1_2603".
+
+5. Suba el archivo zip del release como respuesta a la evaluación en SICUA
