@@ -1,4 +1,4 @@
-# Parcial práctico - Sección 2 - 202020
+# Ejemplo Parcial práctico 1
 
 ## Instrucciones
 
@@ -80,15 +80,3 @@ Body:
 Response: 412
 "El médico tiene el apellido vacío o nulo"
 ```
-
-## Entrega
-
-1. Agregue los pantallazos de las pruebas de Postman a la carpeta _images_ de su repositorio
-
-2. Exporte la coleccioń en la carpeta `s2_parcial1-api/collections`
-
-3. Haga commit y push a la rama master
-
-4. Cree un _release_ de su código con el nombre "Parcial1_2603".
-
-5. Suba el archivo zip del release como respuesta a la actividad en SICUA
