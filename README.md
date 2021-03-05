@@ -1,4 +1,4 @@
-# Ejemplo Parcial práctico 1
+# Ejemplo Parcial Práctico 1
 
 ## Instrucciones
 
