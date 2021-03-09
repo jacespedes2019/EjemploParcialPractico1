@@ -3,61 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.uniandes.csw.parcial1.dtos;
+package co.edu.uniandes.csw.parcial1.entities;
 
-import co.edu.uniandes.csw.parcial1.entities.MedicoEntity;
 import java.io.Serializable;
+import javax.persistence.Entity;
 
 /**
  *
- * @author josejbocanegra
+ * @author Jairo Céspedes
  */
-public class MedicoDTO implements Serializable {
+@Entity
+public class MedicoEntity extends BaseEntity implements Serializable{
     
-    private Long id;
     private String nombre;
     private String apellido;
     private String registroMedico;
     private String especialidad;
-    
-    public MedicoDTO(){
-        
-    }
-    
-    public MedicoDTO(MedicoEntity medicoEntity) {
-        if(medicoEntity!=null){
-            this.apellido=medicoEntity.getApellido();
-            this.id=medicoEntity.getId();
-            this.nombre=medicoEntity.getNombre();
-            this.especialidad=medicoEntity.getEspecialidad();
-            this.registroMedico=medicoEntity.getRegistroMedico();
-        }
-    }
-    
-    public MedicoEntity toEntity() {
-        MedicoEntity medicoEntity= new MedicoEntity();
-        medicoEntity.setApellido(getApellido());
-        medicoEntity.setEspecialidad(getEspecialidad());
-        medicoEntity.setId(getId());
-        medicoEntity.setNombre(getNombre());
-        medicoEntity.setRegistroMedico(getRegistroMedico());
-        
-        return medicoEntity;
-    }
-
-    /**
-     * @return the id
-     */
-    public Long getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     /**
      * @return the nombre
@@ -114,5 +75,7 @@ public class MedicoDTO implements Serializable {
     public void setRegistroMedico(String registroMedico) {
         this.registroMedico = registroMedico;
     }
+
+    
     
 }

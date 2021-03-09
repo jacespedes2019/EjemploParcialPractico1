@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "b810fe88-db58-42ec-add2-804f314d8923",
+		"name": "Parcial 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/s2_parcial1-api/api/medicos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nombre\": \"Juan Jose\",\r\n\t\"apellido\": \"Rodríguez Ortiz\",\r\n\t\"registroMedico\": \"FC3578K\",\r\n\t\"especialidad\": \"Anestesiología\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/s2_parcial1-api/api/medicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"s2_parcial1-api",
+						"api",
+						"medicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/s2_parcial1-api/api/medicos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nombre\": \"Juan Jose\",\r\n\t\"apellido\": \"\",\r\n\t\"registroMedico\": \"FC3578K\",\r\n\t\"especialidad\": \"Anestesiología\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/s2_parcial1-api/api/medicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"s2_parcial1-api",
+						"api",
+						"medicos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

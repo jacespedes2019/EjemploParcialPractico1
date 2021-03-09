@@ -6,7 +6,10 @@
 package co.edu.uniandes.csw.parcial1.resources;
 
 import co.edu.uniandes.csw.parcial1.dtos.MedicoDTO;
+import co.edu.uniandes.csw.parcial1.ejb.MedicoLogic;
+import co.edu.uniandes.csw.parcial1.exceptions.BusinessLogicException;
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -23,8 +26,12 @@ import javax.ws.rs.core.MediaType;
 @RequestScoped
 public class MedicoResource {
     
+    @Inject
+    private MedicoLogic medicoLogic;
+    
     @POST
-    public MedicoDTO createMedico(MedicoDTO medico){
+    public MedicoDTO createMedico(MedicoDTO medico) throws BusinessLogicException{
+        MedicoDTO medicoDTO = new MedicoDTO(medicoLogic.createMedico(medico.toEntity()));
         return medico;
     }
 }
